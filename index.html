@@ -1,15 +1,15 @@
 ﻿<!--// 
 Pag gusto niyo gamitin yung list wifi rates ito
 
-1/PHP - lpb$piso ?>
-5/PHP - lpb$lima ?>
-10/PHP - lpb$pulo ?>
+1/PHP - <?=$piso ?>
+5/PHP - <?=$lima ?>
+10/PHP - <?=$pulo ?>
 -->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>lpb$title ?></title>
+    <title><?=$title ?></title>
     <meta http-equiv="pragma" content="no-cache" />
     <meta charset="utf-8">
     <meta http-equiv="expires" content="-1" />
@@ -17,6 +17,7 @@ Pag gusto niyo gamitin yung list wifi rates ito
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
     <link rel="stylesheet" href="css/semantic.min.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="css/lpb.css" media="screen" type="text/css">
 
     <script type="text/javascript" src="js/md5.js"></script>
     <script src="js/jquery.min.js" type="text/javascript"></script>
@@ -34,7 +35,6 @@ Pag gusto niyo gamitin yung list wifi rates ito
         });
     </script>
 	
-
 	
 </head>
 <body class='login' style="background:linear-gradient(#222325, #222326);">
@@ -45,7 +45,7 @@ Pag gusto niyo gamitin yung list wifi rates ito
                         <img class="logo" src="images/logo.png" />
                     </div>
                     <div class="item">
-                        <h3>lpb$title ?></h3>
+                        <h3><?=$title ?></h3>
                     </div>
                 </div>
             </div>
@@ -72,8 +72,8 @@ Pag gusto niyo gamitin yung list wifi rates ito
 						
 	                 <p style="color: #7BA800;text-align:center;font-size:16px">Status:
 					 <br>
-                    </span>lpb$status_html ?> <br>
-                     lpb($pausedTime) ? '<span>PAUSED TIME: </span> <span>-- </span> <br>' : '<span>TIME:</span><span id="rtime">0:00</span>' ?>
+                    </span><?=$status_html ?> <br>
+                     <?=($pausedTime) ? '<span>PAUSED TIME: </span> <span>-- </span> <br>' : '<span>TIME:</span><span id="rtime">0:00</span>' ?>
                       <br>					
 					  </p>
 
@@ -87,11 +87,11 @@ Pag gusto niyo gamitin yung list wifi rates ito
 
 				  
 						<div class="field" style="text-align:center !important;">
-						<a href="lpb$connectlink ?>" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Insert Coin</a>
+						<a href="<?=$connectlink ?>" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Insert Coin</a>
 						</div>
 						
 						<div class="field" style="text-align:center !important;">
-						<a href="lpb$buyvoucherlink ?>" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Buy Voucher</a>
+						<a href="<?=$buyvoucherlink ?>" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Buy Voucher</a>
 						</div>
 						
 	                 <form name="frmvoucher" id="frmvoucher" class="form-input-flat" action="<?= $encoder ?>" method="post">
@@ -109,8 +109,8 @@ Pag gusto niyo gamitin yung list wifi rates ito
 
 							  
 							 
-						lpb($errorsession) ? '<p style="color: #7BA800;text-align:center;font-size:16px"> '.$errormsg.'   </p>' : '' ?>
-						lpb($onQueue) ? '<p style="color: #222326;text-align:center;font-size:16px">Someone is already on the coin slot, please wait a while<span style="color: #ffffff; font-size: 16px">$(error)</span>$(endif)</p>' : $onQueue = false ?>
+						<?=($errorsession) ? '<p style="color: #7BA800;text-align:center;font-size:16px"> '.$errormsg.'   </p>' : '' ?>
+						<?=($onQueue) ? '<p style="color: #222326;text-align:center;font-size:16px">Someone is already on the coin slot, please wait a while<span style="color: #ffffff; font-size: 16px">$(error)</span>$(endif)</p>' : $onQueue = false ?>
 						
 						<p style="color: #7BA800;text-align:center;font-size:16px">You must log in to this network<br>before you can access the internet.
 							<br>
@@ -283,7 +283,7 @@ Pag gusto niyo gamitin yung list wifi rates ito
 		
 		
 		    <div class='ui bottom fixed inverted menu'>
-			<p style="color: #7BA800;text-align:left-side";>Powered By: lpb $title ?>
+			<p style="color: #7BA800;text-align:left-side";>Powered By: <?= $title ?>
 			<br>Contact us @ 09217812557</p>
           
             <br>
