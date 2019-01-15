@@ -80,18 +80,18 @@ Pag gusto niyo gamitin yung list wifi rates ito
                               <?= ($pausedTime) ? '<a href="'.$resumesessionlink.'" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Resume Paused Time</a>' : '' ?>	
                            </div>
 						   <div class="field" style="text-align:center !important;">
-                           <?= ($remainingTime > 0) ? '<a href="'.$pausesessionlink.'" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Pause Time</a>  <a href="'.$session2voucher.'" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Convert time to voucher</a>' : '' ?>	
+                             <?= ($remainingTime > 0 && $mode == 1) ? '<a href="'.$pausesessionlink.'" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Pause Time</a>  <a href="'.$session2voucher.'" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Convert time to voucher</a>' : '' ?>	
                           </div>
 
 
 
 						<div class="field" style="text-align:center !important;">
-lpb(file_exists($checkinsert)) ? '<button type="button" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;" disabled>Insert Coin Disable</button>' : '<a href="'.$connectlink.'"  class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Insert Coin</a>' ?>						
+                  lpb(file_exists($checkinsert) || $mode == 2) ? '<button type="button" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;" disabled>Insert Coin Disable</button>' : '<a href="'.$connectlink.'"  class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Insert Coin</a>' ?>				
 						</div>
 
 						<div class="field" style="text-align:center !important;">
-						<a href="lpb$buyvoucherlink ?>" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Buy Voucher</a>
-						</div>
+						lpb($mode == 2) ? '<button type="button" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;" disabled>Buy Voucher Disable</button>' : '<a href="<?= $buyvoucherlink ?>"  class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Buy Voucher</a>' ?>
+                        </div>
 
 	                 <form name="frmvoucher" id="frmvoucher" class="form-input-flat" action="<?= $encoder ?>" method="post">
 						<div class="field">
