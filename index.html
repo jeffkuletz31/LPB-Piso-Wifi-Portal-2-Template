@@ -112,7 +112,7 @@ Pag gusto niyo gamitin yung list wifi rates ito
                               <?= ($pausedTime) ? '<a href="'.$resumesessionlink.'" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Resume Paused Time</a>' : '' ?>	
                            </div>
 						   <div class="field" style="text-align:center !important;">
-                           <?= ($remainingTime > 0) ? '<a href="'.$pausesessionlink.'" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Pause Time</a>  <a href="'.$session2voucher.'" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Convert time to voucher</a>' : '' ?>	
+                           <?= ($remainingTime > 0 & $xzcas >=1) ? '<a href="'.$pausesessionlink.'" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Pause Time</a>  <a href="'.$session2voucher.'" class="ui large button" style="background-color:#7ba800; color:white; border-radius:30px 30px !important; width: 150px;">Convert time to voucher</a>' : '' ?>	
                           </div>
 
 
